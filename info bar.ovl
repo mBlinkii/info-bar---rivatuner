@@ -136,7 +136,7 @@ Line0Cell2Color=FFFF,,40,8738FF,40,60,FE38FF,80,(CPU usage,1)
 Line0Cell3Source=CPU power
 Line0Cell3Color=80FF
 Line0Cell4Source=CPU temperature
-Line0Cell4Color=BC00,,70,FFC300,,75,FF0000,80,(GPU1 temperature,1)
+Line0Cell4Color=BC00,,70,FFC300,,75,FF0000,80,(CPU temperature,1)
 [Table1]
 Name=Info Bar GPU
 ValueAlignment=0
@@ -201,7 +201,7 @@ MarginBottom=-4
 [Layer1]
 Name=GPU
 Text=<TT=Info Bar GPU>
-PositionX=-40
+PositionX=-43
 PositionY=0
 ExtentX=-33
 ExtentY=-1
@@ -217,7 +217,7 @@ MarginBottom=-4
 [Layer2]
 Name=FPS
 Text=<TT=Info Bar FPS>
-PositionX=-76
+PositionX=-82
 PositionY=0
 ExtentX=-16
 ExtentY=-1
@@ -233,7 +233,7 @@ MarginBottom=-4
 [Layer3]
 Name=RAM
 Text=<TT=Info Bar RAM>
-PositionX=-95
+PositionX=-100
 PositionY=0
 ExtentX=-10
 ExtentY=-1

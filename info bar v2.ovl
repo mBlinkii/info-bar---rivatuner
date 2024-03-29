@@ -5,18 +5,18 @@ FontHeight=-9
 FontWeight=400
 ZoomRatio=2
 [Settings]
-Name=
+Name=info bar
 EnvVars=
 RefreshPeriod=1000
-EmbeddedImage=
+EmbeddedImage=bg.png
 PingAddr=
 [General]
 Sources=15
 Tables=4
-Layers=4
+Layers=16
 [Source0]
 Name=CPU temperature
-Units=°C
+Units=ï¿½C
 Format=
 Formula=
 Provider=HAL
@@ -65,7 +65,7 @@ Provider=HAL
 ID=RAM usage percent
 [Source7]
 Name=GPU1 temperature
-Units=°C
+Units=ï¿½C
 Format=
 Formula=
 Provider=HAL
@@ -182,67 +182,155 @@ Line0Cell1Color=FFFFFF
 Line0Cell2Source=RAM usage percent
 Line0Cell2Color=BC00,,70,FFC300,,75,FF0000,80,(RAM usage percent,0)
 [Layer0]
-Name=CPU
+Name=text CPU
 Text=<TT=Info Bar><TT=Info Bar CPU>
 PositionX=0
 PositionY=0
-ExtentX=-35
-ExtentY=-1
+ExtentX=256
+ExtentY=28
 ExtentOrigin=4
 Alignment=1
 FixedAlignment=1
-BgndColor=822D2D2D
-BorderColor=191919
-BorderSize=1
-MarginLeft=-4
-MarginTop=-4
-MarginRight=-4
-MarginBottom=-4
 [Layer1]
-Name=GPU
+Name=text GPU
 Text=<TT=Info Bar GPU>
-PositionX=-43
+PositionX=284
 PositionY=0
-ExtentX=-33
-ExtentY=-1
+ExtentX=256
+ExtentY=28
 ExtentOrigin=4
 FixedAlignment=1
-BgndColor=822D2D2D
-BorderColor=191919
-BorderSize=1
 MarginLeft=-4
 MarginTop=-4
 MarginRight=-4
 MarginBottom=-4
 [Layer2]
-Name=FPS
+Name=text FPS
 Text=<TT=Info Bar FPS>
-PositionX=-82
-PositionY=0
-ExtentX=-16
-ExtentY=-1
+PositionX=332
+PositionY=28
+ExtentX=160
+ExtentY=28
 ExtentOrigin=4
 FixedAlignment=1
-BgndColor=822D2D2D
-BorderColor=191919
-BorderSize=1
-MarginLeft=-4
-MarginTop=-4
-MarginRight=-4
-MarginBottom=-4
 [Layer3]
-Name=RAM
+Name=text RAM
 Text=<TT=Info Bar RAM>
-PositionX=-100
-PositionY=0
-ExtentX=-10
-ExtentY=-1
+PositionX=48
+PositionY=28
+ExtentX=160
+ExtentY=28
 ExtentOrigin=4
-FixedAlignment=1
-BgndColor=822D2D2D
-BorderColor=191919
-BorderSize=1
 MarginLeft=-4
 MarginTop=-4
 MarginRight=-4
 MarginBottom=-4
+[Layer4]
+Name=img left cpu
+Text=<I=0,0,0,0,96,128>
+PositionX=0
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+Size=0
+[Layer5]
+Name=img center cpu
+Text=<I=0,0,128,0,32,128>
+PositionX=28
+PositionY=0
+ExtentX=200
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer6]
+Name=img right cpu
+Text=<I=0,0,192,0,96,128>
+PositionX=228
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer7]
+Name=img left gpu
+Text=<I=0,0,0,0,96,128>
+PositionX=284
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer8]
+Name=img center gpu
+Text=<I=0,0,128,0,32,128>
+PositionX=312
+PositionY=0
+ExtentX=200
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer9]
+Name=img right gpu
+Text=<I=0,0,192,0,96,128>
+PositionX=512
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer10]
+Name=img left ram
+Text=<I=0,0,0,0,96,128>
+PositionX=48
+PositionY=28
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer11]
+Name=img center ram
+Text=<I=0,0,128,0,32,128>
+PositionX=76
+PositionY=28
+ExtentX=104
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer12]
+Name=img right ram
+Text=<I=0,0,192,0,96,128>
+PositionX=180
+PositionY=28
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer13]
+Name=img left fps
+Text=<I=0,0,0,0,96,128>
+PositionX=332
+PositionY=28
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer14]
+Name=img center fps
+Text=<I=0,0,128,0,32,128>
+PositionX=360
+PositionY=28
+ExtentX=104
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer15]
+Name=img right fps
+Text=<I=0,0,192,0,96,128>
+PositionX=464
+PositionY=28
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1

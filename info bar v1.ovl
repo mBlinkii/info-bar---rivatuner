@@ -1,0 +1,336 @@
+[Master]
+Implementation=2
+FontFace=Unispace
+FontHeight=-9
+FontWeight=400
+ZoomRatio=2
+[Settings]
+Name=info bar
+EnvVars=
+RefreshPeriod=1000
+EmbeddedImage=bg.png
+PingAddr=
+[General]
+Sources=15
+Tables=4
+Layers=16
+[Source0]
+Name=CPU temperature
+Units=�C
+Format=
+Formula=
+Provider=HAL
+ID=CPU temperature
+[Source1]
+Name=CPU clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=CPU clock
+[Source2]
+Name=CPU power
+Units=W
+Format=
+Formula=
+Provider=HAL
+ID=CPU power
+[Source3]
+Name=CPU usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage
+[Source4]
+Name=CPU usage max
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage max
+[Source5]
+Name=RAM usage
+Units=GB
+Format=%.1f
+Formula=x/1024
+Provider=HAL
+ID=RAM usage
+[Source6]
+Name=RAM usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=RAM usage percent
+[Source7]
+Name=GPU1 temperature
+Units=�C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 temperature
+[Source8]
+Name=GPU1 clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 clock
+[Source9]
+Name=GPU1 power
+Units=W
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 power
+[Source10]
+Name=GPU1 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 usage
+[Source11]
+Name=GPU1 memory usage
+Units=GB
+Format=%.1f
+Formula=x/1024
+Provider=HAL
+ID=GPU1 memory usage
+[Source12]
+Name=GPU1 memory usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory usage percent
+[Source13]
+Name=Total RAM
+Units=GB
+Format=
+Formula=x/1024
+Provider=HAL
+ID=Total RAM
+[Source14]
+Name=GPU1 total memory
+Units=GB
+Format=
+Formula=x/1024
+Provider=HAL
+ID=GPU1 total memory
+[Table0]
+Name=Info Bar CPU
+ValueAlignment=0
+UnitsAlignment=0
+Lines=1
+Line0Name="CPU "
+Line0Color=FFFFFF
+Line0Cells=5
+Line0Cell0Text=%CPUShort%
+Line0Cell0Color=80C000
+Line0Cell1Source=CPU clock
+Line0Cell1Color=FFFFFF
+Line0Cell2Source=CPU usage
+Line0Cell2Color=FFFF,,40,8738FF,40,60,FE38FF,80,(CPU usage,1)
+Line0Cell3Source=CPU power
+Line0Cell3Color=80FF
+Line0Cell4Source=CPU temperature
+Line0Cell4Color=BC00,,70,FFC300,,75,FF0000,80,(CPU temperature,1)
+[Table1]
+Name=Info Bar GPU
+ValueAlignment=0
+UnitsAlignment=0
+Lines=1
+Line0Name=GPU
+Line0Color=FFFFFF
+Line0Cells=5
+Line0Cell0Text=%GPU%
+Line0Cell0Color=80C000
+Line0Cell1Source=GPU1 clock
+Line0Cell1Color=FFFFFF
+Line0Cell2Source=GPU1 usage
+Line0Cell2Color=FFFF,,40,8738FF,40,60,FE38FF,80,(GPU1 usage,0)
+Line0Cell3Source=GPU1 power
+Line0Cell3Color=80FF
+Line0Cell4Source=GPU1 temperature
+Line0Cell4Color=BC00,,70,FFC300,,75,FF0000,80,(GPU1 temperature,0)
+[Table2]
+Name=Info Bar FPS
+ValueAlignment=0
+UnitsAlignment=0
+Lines=1
+Line0Name=FPS
+Line0Color=FFFFFF
+Line0Cells=2
+Line0Cell0Source=Framerate
+Line0Cell0Color=FF0000,,30,FF0000,30,45,FFFF00,45,60,80C000,60,(Framerate,0)
+Line0Cell1Source=Frametime
+Line0Cell1Color=80FF
+[Table3]
+Name=Info Bar RAM
+ValueAlignment=0
+UnitsAlignment=0
+Lines=1
+Line0Name=RAM
+Line0Color=FFFFFF
+Line0Cells=3
+Line0Cell0Source=RAM usage
+Line0Cell0Color=80FF
+Line0Cell1Source=Total RAM
+Line0Cell1Color=FFFFFF
+Line0Cell2Source=RAM usage percent
+Line0Cell2Color=BC00,,70,FFC300,,75,FF0000,80,(RAM usage percent,0)
+[Layer0]
+Name=text CPU
+Text=<TT=Info Bar><TT=Info Bar CPU>
+PositionX=0
+PositionY=0
+ExtentX=256
+ExtentY=28
+ExtentOrigin=4
+Alignment=1
+FixedAlignment=1
+[Layer1]
+Name=text GPU
+Text=<TT=Info Bar GPU>
+PositionX=284
+PositionY=0
+ExtentX=256
+ExtentY=28
+ExtentOrigin=4
+FixedAlignment=1
+MarginLeft=-4
+MarginTop=-4
+MarginRight=-4
+MarginBottom=-4
+[Layer2]
+Name=text FPS
+Text=<TT=Info Bar FPS>
+PositionX=756
+PositionY=0
+ExtentX=160
+ExtentY=28
+ExtentOrigin=4
+FixedAlignment=1
+[Layer3]
+Name=text RAM
+Text=<TT=Info Bar RAM>
+PositionX=568
+PositionY=0
+ExtentX=160
+ExtentY=28
+ExtentOrigin=4
+MarginLeft=-4
+MarginTop=-4
+MarginRight=-4
+MarginBottom=-4
+[Layer4]
+Name=img left cpu
+Text=<I=0,0,0,0,96,128>
+PositionX=0
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+Size=0
+[Layer5]
+Name=img center cpu
+Text=<I=0,0,128,0,32,128>
+PositionX=28
+PositionY=0
+ExtentX=200
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer6]
+Name=img right cpu
+Text=<I=0,0,192,0,96,128>
+PositionX=228
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer7]
+Name=img left gpu
+Text=<I=0,0,0,0,96,128>
+PositionX=284
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer8]
+Name=img center gpu
+Text=<I=0,0,128,0,32,128>
+PositionX=312
+PositionY=0
+ExtentX=200
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer9]
+Name=img right gpu
+Text=<I=0,0,192,0,96,128>
+PositionX=512
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer10]
+Name=img left ram
+Text=<I=0,0,0,0,96,128>
+PositionX=568
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer11]
+Name=img center ram
+Text=<I=0,0,128,0,32,128>
+PositionX=596
+PositionY=0
+ExtentX=104
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer12]
+Name=img right ram
+Text=<I=0,0,192,0,96,128>
+PositionX=700
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer13]
+Name=img left fps
+Text=<I=0,0,0,0,96,128>
+PositionX=756
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer14]
+Name=img center fps
+Text=<I=0,0,128,0,32,128>
+PositionX=784
+PositionY=0
+ExtentX=104
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
+[Layer15]
+Name=img right fps
+Text=<I=0,0,192,0,96,128>
+PositionX=888
+PositionY=0
+ExtentX=28
+ExtentY=28
+ExtentOrigin=0
+FixedAlignment=1
